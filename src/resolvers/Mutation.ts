@@ -5,6 +5,7 @@ export interface MutationParent {}
 
 export const Mutation: MutationResolvers.Type<TypeMap> = {
   createDraft: (parent, args, ctx) => {
+    console.log("hello world")
     return ctx.db.createPost({
       title: args.title,
       content: args.content,
